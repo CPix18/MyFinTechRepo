@@ -38,3 +38,13 @@
 * More focus on Bitcoin and Ethereum. Right now the native blockchain Proton will operate on EOSIO because of speed and cheap transaction costs which is fine but there are so many great applications already built on the major blockchains which can be combined to make a one stop solution. 
 
 * After all this is an app with the goal to assist in mass adoption of cryptocurrency and blockchain technology. It only makes sense for them to use OG blockchains which have massive developer numbers and DAU to do this.
+
+## Resources
+
+*[Metal Vault](https://app.metalpay.com/)
+
+*[CryptoCurrency Act of 2020](https://www.newsbtc.com/2020/03/11/new-cryptocurrency-act-congress/)
+
+*[Proton Blockchain](https://medium.com/@dotkrueger/lynx-metal-proton-54e2d4b4cdf7)
+
+*[Metal VC](https://blog.metalpay.com/announcement-introducing-metal-vc/)
