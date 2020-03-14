@@ -2,7 +2,7 @@
 
 ## The world of banking has evolved by several orders of magnitude over the past 20 years but to really get a sense of where we are today, we need to look at the early history of money and trade. For centuries humans have used "money/value" to exchange goods/services, pay workers to produce goods/services, invest in business capital expenditures, and as a display of wealth in some cases. Before humans had a money like paper dollars, a system of trade and barter was used where if someone needed something in particular, they would trade a physical good they already had for an item they needed. The problem with that was the inefficiencies when exchanging a cow for 3 pigs. How can one determine if that is a good trade or the optimal exchange rate for either animal? Welcome money, either in the form of gold, coin, stone, paper, and numerous other physical objects. These were used as mediums of exchange which made transacting easier. It wasn't until recently where we created "fiat" currencies controlled by government monetary policy. For the most part, these currencies have led to massive inflation and the need to print more money as we see today in countries like Turkey and Venezuela. Then about 11 years ago a huge innovation was created when Satoshi Nakamoto released the Bitcoin White Paper. This currency has a rigid supply schedule with a fixed hard cap of coins ever to be produced. The underlying technology is a blockchain supported by a global crypto-economic incentive to "mine" the next block to release Bitcoin into circulation. A lot of people new to Bitcoin get caught up in the volatility of price per Bitcoin to the US dollar but what they often overlook is what Bitcoin brought to the Internet, solutions to the double spend problem and the Byzantine General's Problem. These two attributes along with its fixed monetary policy and proof of work consensus has turned Bitcoin into what it is today. 
 
-* Metal Pay/Metallicius [Metal Pay](https://www.metalpay.com)
+* Metal Pay by Metallicius - [Metal Pay](https://www.metalpay.com)
 
 * 2017
 
@@ -38,8 +38,11 @@
 * More focus on Bitcoin and Ethereum. Right now the native blockchain Proton will operate on EOSIO because of speed and cheap transaction costs which is fine but there are so many great applications already built on the major blockchains which can be combined to make a one stop solution. 
 
 * After all this is an app with the goal to assist in mass adoption of cryptocurrency and blockchain technology. It only makes sense for them to use OG blockchains which have massive developer numbers and DAU to do this.
+<br/>
+<br/>
+<br/>
 
-## Resources
+# Resources
 
 *[Metal Vault](https://app.metalpay.com/)
 
@@ -48,3 +51,32 @@
 *[Proton Blockchain](https://medium.com/@dotkrueger/lynx-metal-proton-54e2d4b4cdf7)
 
 *[Metal VC](https://blog.metalpay.com/announcement-introducing-metal-vc/)
+<br/>
+<br/>
+<br/>
+
+# App Interface
+
+![Home Screen](IMG_2815.png)
+
+## Home Screen
+
+* Total Balance
+    * Fiat and Crypto
+* Crypto Wallet 
+    * Marketplace 
+* Fiat Wallet 
+    * On/Off Ramp to Bank
+* Request/Send 
+    * In-app or On-chain
+
+## Tabs
+
+* Home
+    * Wallets
+* Payments
+   *  Fiat/Crypto 
+* QR Scan
+    * Easy Send
+* Discover
+    * Metal University
