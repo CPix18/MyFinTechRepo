@@ -44,6 +44,11 @@
 
 # Resources
 
+*[2019 Review](https://blog.metalpay.com/metal-pay-2019-year-in-review/
+)
+
+*[Investment Info](https://www.prnewswire.com/news-releases/metal-pay-launches-with-peer-to-peer-payments-app-that-rewards-users-with-up-to-five-percent-back-in-cryptocurrency-300712797.html)
+
 *[Metal Vault](https://app.metalpay.com/)
 
 *[CryptoCurrency Act of 2020](https://www.newsbtc.com/2020/03/11/new-cryptocurrency-act-congress/)
