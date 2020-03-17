@@ -112,46 +112,32 @@ total_months = len(dict)
 total_amount = sum(dict.values())
 count = len(dict.values())
 
+firstPass = True
+month1 = 0
+dictDeltas = {}
+for key, value in dict.items():
+    if firstPass:
+        month1 = value
+        firstPass = False
+    else:
+        month2 = value
+        delta = month2 - month1
+        month1 = month2
+        dictDeltas[key] = delta
+print(dictDeltas)
+
+
 
 # Find average of the changes in Profit/Losses over entire period
 
-    # iterate over each value of the list
-for day_pnl in dict_list:
-    
-    # logic to determine minimum and maximum values
-    if minimum == 0:
-        minimum = day_pnl
-    elif day_pnl < minimum:
-        minimum = day_pnl
-    elif day_pnl > maximum:
-        maximum = day_pnl
-            
-        
-# logic to determine profitable vs. unprofitable
-    if day_pnl > 0:
-        profitable_months.append(day_pnl)
-    elif day_pnl <= 0:
-        unprofitable_months.append(day_pnl)
-        
-    # calculate the average change
-    average_change = round(total_amount / total_months , 2)
-            
+
         
 # Find greatest increase in profits (date and amount) over entire period
 
-    # take maximum day_pnl, find prior key and value pair 
-    max_day_prior = 
-    
-    # combine maximum day_pnl and prior value
-    g_i = |max_day_prior| + maximum
+
     
 #Find greatest decrease in profits (date and amount) over entire period
     
-    # take minimum day_pnl,find prior key and value pair
-    min_day_prior = 
-    
-    # combine minimum day_pnl and prior value
-    g_d = |min_day_prior| - minimum
     
     
 print("   Financial Analysis   ")
