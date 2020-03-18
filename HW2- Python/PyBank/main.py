@@ -90,15 +90,14 @@ dict = {
 # Initialize variables
 total = 0
 count = 0
-average = 0
-minimum = 0
-maximum = 0
 
 # Initialize lists
 average_change = []
 profitable_months = []
 unprofitable_months = []
-
+sum_dictDeltas_list = []
+dictDeltas = []
+dictDeltas_list = []
 
 # Create list of dictionary values
 dict_list = list(dict.values())
@@ -112,6 +111,8 @@ total_months = len(dict)
 total_amount = sum(dict.values())
 count = len(dict.values())
 
+
+# Create list of value changes from month to month
 firstPass = True
 month1 = 0
 dictDeltas = {}
@@ -124,26 +125,36 @@ for key, value in dict.items():
         delta = month2 - month1
         month1 = month2
         dictDeltas[key] = delta
-print(dictDeltas)
 
+# Create list of values from delta dictionary
+dictDeltas_list = (dictDeltas.values())
 
 
 # Find average of the changes in Profit/Losses over entire period
-
-
+average_change = sum(dictDeltas_list) / len(dictDeltas_list)
+average_change_round = round(average_change,2)
         
 # Find greatest increase in profits (date and amount) over entire period
+g_i = max(dictDeltas_list)
+ 
+# create separate key and value list
+key_dictDeltas = list(dictDeltas.keys())
+val_dictDeltas = list(dictDeltas.values())
 
+
+g_i_date = (key_dictDeltas[val_dictDeltas.index(g_i)])
 
     
 #Find greatest decrease in profits (date and amount) over entire period
-    
-    
+g_d = min(dictDeltas_list)
+
+g_d_date = (key_dictDeltas[val_dictDeltas.index(g_d)])
+
     
 print("   Financial Analysis   ")
 print("--------------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${total_amount}")
-print(f"Average Change: ${day_pnl}")
-print(f"Greatest Increase in Profits:{g_i}")
-print(f"Greatest Decrease in Profits:{g_d}")
+print(f"Average Change: ${average_change_round}")
+print(f"Greatest Increase in Profits: {g_i_date} (${g_i})")
+print(f"Greatest Decrease in Profits: {g_d_date} (${g_d})")
