@@ -19,7 +19,7 @@ welcome_name = input("Welcome to the sandwich shop, what do I call you?")
 
 print(f"Hello {welcome_name}")
 
-question_sandwich = input("Are you here for a sandwich (Y/N)")
+question_sandwich = input("Are you here for a sandwich: Y/N")
 
 food_prompt = input("What kind of sandwich would you like?")
 

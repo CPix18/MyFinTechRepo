@@ -4,7 +4,7 @@ import csv
 
 # Set the file path
 dir_path = Path(__file__).parents[1]
-file_path = f"{dir_path}/Resources/menu_data.csv"
+file_path = f"{dir_path}/PyRamen/Resources/menu_data.csv"
 for path in Path(__file__).parents:
     print(path)
 

@@ -1,10 +1,9 @@
 # Declare a variable of `name` with an input and a string of "Welcome to the Boba Shop! What is your name?".
 name = input("Welcome to the Boba Shop! What is your name?")
-
 # Check if `name` is not an empty string or equal to `None`.
 if name == "None":
     # If so, write a print with a string of "Hello" concatenated with the variable `name`.
-    print(f"Hello" {name}")
+    print(name)
 
     # Then, declare a variable of `beverage` with an input and a string of "What kind of boba drink would you like?".
 beverage = input("What kind of boba drink would you like?")
@@ -30,4 +29,4 @@ name = input("Welcome to the Boba Shop! What is your name?")
 beverage = input("What kind of boba drink would you like?")
 
 if name == "None":
-     print(f"Hello" {name}")
+     print(name)
