@@ -1,44 +1,56 @@
 # Declare an empty list named `our_list`.
-
+our_list = []
 
 # Use the `append` list function to append the number 1 into `our_list`.
-
+our_list.append(1)
 
 # Append the string "hello" into `our_list`.
-
+our_list.append("hello")
 
 # Append the boolean False into `our_list`.
-
+our_list.append(False)
 
 # Append the number 84 into `our_list`.
-
+our_list.append(84)
 
 # Append the string "world" into `our_list`
-
+our_list.append("world")
 
 # Print `our_list`
-
+print(our_list)
 
 # Declare a variable named `one_to_ten` and assign it an list containing the numbers from 1 to 10.
-
+one_to_ten = [1,2,3,4,5,6,7,8,9,10]
 
 # Print the 4th element from `one_to_ten`.
-
+print(one_to_ten[3])
 
 # Print the 7th element from `one_to_ten`.
-
+print(one_to_ten[6])
 
 # We've declared this list for you
 num_list = [2, 65, 3, 7, 39, 22, 11, 94, 299, 9, 20, 21, 51, 37]
 
 # Iterate through the provided `num_list` and create an if-else statement to print every number greater than 50
-
+print("Numbers greater than 50:")
+for number in num_list:
+  if number > 50:
+    print(number)
 
 # Iterate through the provided `num_list` and use the `index` function to print the index of the first occurrence of the number 11.
-
+print("Index the first occurence of the number 11:")
+index = 0
+for number in num_list:
+  if number == 11:
+    print(index)
+  index += 1
 
 # Iterate through the provided `num_list` and print the sum of all the numbers.
-
+print("The sum of all numbers:")
+sum = 0
+for number in num_list:
+  sum += number
+print(sum)
 
 # Iterate through the provided `num_list` and create an if-else statement to print the sum of all the numbers greater than 50.
 
