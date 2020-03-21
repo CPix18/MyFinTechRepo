@@ -53,8 +53,13 @@ for number in num_list:
 print(sum)
 
 # Iterate through the provided `num_list` and create an if-else statement to print the sum of all the numbers greater than 50.
-
-
+print("Sum of all numbers greater than 50:")
+sum = 0
+for number in num_list:
+  if number > 50:
+    sum += 50
+print(sum)
+  
 # Iterate through the provided `num_list` and create an if-else statement to print the sum of all the even numbers.
 
 

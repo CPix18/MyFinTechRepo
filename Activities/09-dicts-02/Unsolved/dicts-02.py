@@ -2,13 +2,13 @@
 from show_data import shows
 
 # QUESTION 1: Who is the actor that plays Squidward in Spongebob (kids)?
-
+print(shows["genre"]["kids"]["Spongebob"]["cast"][3]["actor"])
 
 # QUESTION 2: Patrick Warburton plays Joe Swanson in Family Guy (comedy). What is the link to his imdb page?
-
+print(shows["genre"]["comedy"]["family_guy"]["cast"][4]["imdb"])
 
 # QUESTION 3: Is the Walking Dead still running?
-
+print(shows["genre"]["drama"]["the_walking_dead"]["still_running"])
 
 # QUESTION 4: Who plays Dexter in Dexter (drama) and who plays Dexter in Dexter's Lab (kids)?
 # HINT: You can print multiple items at once by using a comma like this: print(thing1, thing2)
