@@ -15,7 +15,7 @@ print(shows["genre"]["drama"]["the_walking_dead"]["still_running"])
 
 
 # QUESTION 5: Who are the creators of Stranger Things (drama)?
-
+print(shows["genre"]["drama"]["stranger_things"]["creators"])
 
 # QUESTION 6: Who hosts the Daily Show (talk)?
 
