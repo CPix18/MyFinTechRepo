@@ -1,42 +1,42 @@
--- CREATE TABLE "transaction" (
---   "TransactionID" int,
---   "Date" date,
---   "Amount" float,
---   "CardNumber" varchar(20),
---   "MerchantID" int,
---   PRIMARY KEY ("TransactionID")
--- );
+-- -- CREATE TABLE "transaction" (
+-- --   "transaction_id" int,
+-- --   "date" date,
+-- --   "amount" float,
+-- --   "card_number" varchar(20),
+-- --   "merchant_id" int,
+-- --   PRIMARY KEY ("transaction_id")
+-- -- );
 
--- CREATE INDEX "FK_transaction" ON  "transaction" ("CardNumber");
+-- -- CREATE INDEX "fk_transaction" ON  "transaction" ("card_number");
 
--- CREATE TABLE "card_holder" (
---   "HolderID" int,
---   "HolderName" varchar(100),
---   PRIMARY KEY ("HolderID")
--- );
+-- -- CREATE TABLE "card_holder" (
+-- --   "holder_id" int,
+-- --   "holder_name" varchar(100),
+-- --   PRIMARY KEY ("holder_id")
+-- -- );
 
--- CREATE TABLE "merchant" (
---   "MerchantID" int,
---   "MerchantName" varchar(200),
---   "MerchantCategoryID" int,
---   PRIMARY KEY ("MerchantID")
--- );
+-- -- CREATE TABLE "merchant" (
+-- --   "merchant_id" int,
+-- --   "merchant_name" varchar(200),
+-- --   "merchant_category_id" int,
+-- --   PRIMARY KEY ("merchant_id")
+-- -- );
 
--- CREATE INDEX "FK_merchant" ON  "merchant" ("MerchantCategoryID");
+-- -- CREATE INDEX "fk_merchant" ON  "merchant" ("merchant_category_id");
 
--- CREATE TABLE "merchant_category" (
---   "MerchantCategoryID" int,
---   "MerchantCategoryName" varchar(200),
---   PRIMARY KEY ("MerchantCategoryID")
--- );
+-- -- CREATE TABLE "merchant_category" (
+-- --   "merchant_category_id" int,
+-- --   "merchant_category_name" varchar(200),
+-- --   PRIMARY KEY ("merchant_category_id")
+-- -- );
 
--- CREATE TABLE "credit_card" (
---   "CardNumber" varchar(20),
---   "HolderID" int,
---   PRIMARY KEY ("CardNumber")
--- );
+-- -- CREATE TABLE "credit_card" (
+-- --   "card_number" varchar(20),
+-- --   "holder_id" int,
+-- --   PRIMARY KEY ("card_number")
+-- -- );
 
--- CREATE INDEX "FK_credit_card" ON  "credit_card" ("HolderID");
+-- -- CREATE INDEX "fk_credit_card" ON  "credit_card" ("holder_id");
 
 -- INSERT INTO card_holder VALUES
 --     (1, 'Robert Johnson'),
@@ -3780,3 +3780,10 @@
 --     (948, '2018-12-31 05:53:58', 10.73, 5361779664174555, 19),
 --     (1168, '2018-12-31 08:22:17', 11.87, 4188164051171486, 54),
 --     (2476, '2018-12-31 09:50:25', 19.75, 4723783028106084756, 16);
+
+select card_holder.holder_id, card_holder.holder_name, credit_card.card_number from card_holder
+inner join credit_card on card_holder.holder_id = credit_card.holder_id;
+
+select credit_card.card_number, transaction.transaction_id from credit_card
+inner join transaction on transaction.card_number = credit_card.card_number
+ORDER BY transaction_id asc;
