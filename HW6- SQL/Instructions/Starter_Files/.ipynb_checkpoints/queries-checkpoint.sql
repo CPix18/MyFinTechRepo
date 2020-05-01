@@ -7,8 +7,7 @@
    "outputs": [],
    "source": [
     "#\n",
-    "select \n",
-    "card_holder.holder_name,\n",
+    "select card_holder.holder_name,\n",
     "round(cast(sum(\"transaction\".amount) as numeric),2) as totalsum\n",
     "from card_holder\n",
     "inner join credit_card \n",
@@ -72,6 +71,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
+    "# all transactions under $2 between 7am - 9am\n",
     "select count(*) from transaction --3500\n",
     "where transaction.amount <= 2 --353\n",
     "and extract(hour from transaction.date) between 7 and 8;"
