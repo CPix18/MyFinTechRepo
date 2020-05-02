@@ -73,3 +73,7 @@ join card_holder ch
 on cc.holder_id = ch.holder_id
 where extract(hour from t.date) between 7 and 8;
 
+## Conclusions for Question 1
+
+
+## Conclusions for Question 2

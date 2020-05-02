@@ -9,7 +9,7 @@ on credit_card.card_number = "transaction".card_number
 group by card_holder.holder_name
 order by totalsum asc;
 
--- isolate transactions by cardholder, date and amount between time period 7:00 a.m. to 9:00 a.m
+-- time period 7:00 a.m. to 9:00 a.m
 select ch.holder_name card_holder, t.date, t.amount
 from "transaction" t
 join credit_card cc
@@ -28,7 +28,7 @@ join card_holder ch
 on cc.holder_id = ch.holder_id
 where extract(hour from t.date) between 7 and 8
 order by t.amount desc
-limit 100;
+limit 10;
 
 -- top 5 merchants with under $2 transactions
 select 'merchant_name', count (*) from transaction t

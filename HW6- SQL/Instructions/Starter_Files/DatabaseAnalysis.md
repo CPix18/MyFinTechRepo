@@ -73,3 +73,20 @@ join card_holder ch
 on cc.holder_id = ch.holder_id
 where extract(hour from t.date) between 7 and 8;
 
+# Question 1 Queries
+select count(*) as count, ch.holder_id, extract("month" from t.date) as month from card_holder ch
+inner join credit_card cc 
+on cc.holder_id = ch.holder_id
+inner join transaction t
+on cc.card_number = t.card_number
+where ch.holder_id = 2 or ch.holder_id = 18
+group by month, ch.holder_name, ch.holder_id
+order by month asc;
+
+## Conclusions for Question 1
+
+
+# Question 2 Queries
+
+
+## Conclusions for Question 2
