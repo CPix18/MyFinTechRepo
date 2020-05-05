@@ -84,9 +84,17 @@ group by month, ch.holder_name, ch.holder_id
 order by month asc;
 
 ## Conclusions for Question 1
-
+It seems holder_id 2 did most of his/her consumption during the month of March while holder_id 18 did most of his/her consumption during the month of June. Whereas holder_id 2 did the least amount of consumpiton in the month of November, holder_id 18 did the least amount in the month of April.
 
 # Question 2 Queries
-
+select count(*) as count, ch.holder_id, 
+extract("month" from t.date) as month from card_holder ch
+inner join credit_card cc 
+on cc.holder_id = ch.holder_id
+inner join transaction t
+on cc.card_number = t.card_number
+where ch.holder_id = 25 and extract("month" from t.date) <= 6
+group by month, ch.holder_name, ch.holder_id
+order by month asc;
 
 ## Conclusions for Question 2
