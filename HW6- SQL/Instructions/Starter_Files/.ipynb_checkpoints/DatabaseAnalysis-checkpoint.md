@@ -98,3 +98,4 @@ group by month, ch.holder_name, ch.holder_id
 order by month asc;
 
 ## Conclusions for Question 2
+Most purchases were made in the month of April
