@@ -31,3 +31,9 @@
 ## Regression Analysis:
 -----
 
+![out_of_plot](out_of_plot.png)
+* Out-of-Sample RMSE: 0.4151933603075715
+* In-Sample RMSE: 0.32008015896905967
+
+### Conclusions
+* In-Sample RMSE is lower than Out-of-Sample RMSE which indicates the model is better at predicting the data used to build it rather than out of sample data.
