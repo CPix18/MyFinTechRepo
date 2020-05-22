@@ -7,7 +7,11 @@
 #### Random Forest Imbalanced Classification Report:
 ![randomforest](randomforest.png)
 #### Important Features:
-![impfeatures](impfeatures.png)
+* loan_amnt: (0.07683167692623348)
+* int_rate: (0.0764295316324861)
+* installment: (0.07138400890036296)
+* annual_inc: (0.05749201408182217)
+* dti: (0.056061938800932784)
 
 ### Easy Ensemble AdaBoost
 * Accuracy Score : 0.925427358175101
