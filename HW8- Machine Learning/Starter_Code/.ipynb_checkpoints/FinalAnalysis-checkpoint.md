@@ -3,7 +3,7 @@
 ## Credit Risk Ensemble
 
 ### Balanced Random Forest
-* Accuracy Score: 0.9959895379250218
+* Accuracy Score: 0.7971655164356133
 #### Random Forest Imbalanced Classification Report:
 ![randomforest](randomforest.png)
 #### Important Features:
@@ -15,7 +15,7 @@
 ![eec](eec.png)
 
 ### Gradient Boost
-* Accuracy Score : 0.9957570473699506
+* Accuracy Score : 0.925427358175101
 #### Gradient Boost Imbalanced Classification Report:
 ![gradientboost](gradientboost.png)
 
