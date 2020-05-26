@@ -25,6 +25,7 @@
 
 ## Analysis of Methods:
 * The Balanced Random Forest accuracy score outcompeted the Easy Ensemble AdaBoost and Gradient Boost models.
+* Considering both the low risk and high risk outcome, the Balanced Random Forest Classifier had the best f1 score.
 
 ----------------------------------
 
@@ -52,5 +53,6 @@
 
 ## Analysis on Methods:
 * The worst accuracy score was from the combination method.
+* The Naive Random Oversampling f1 scores proved to be the best when compared to the others.
 
 
