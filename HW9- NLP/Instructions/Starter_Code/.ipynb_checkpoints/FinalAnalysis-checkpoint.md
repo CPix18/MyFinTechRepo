@@ -18,7 +18,11 @@ A: Ethereum had the highest Positive Score of 0.260000, Bitcoin's highest Positi
 
 ## Tokenizer
 
-### Final DataFrame Head
+### Bitcoin DataFrame Head
+![bitcoin](bitcoin.png)
+
+### Ethereum DataFrame Head
+![ethereum](ethereum.png)
 
 
 ## NGrams and Frequency Analysis
