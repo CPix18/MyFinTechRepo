@@ -38,12 +38,16 @@ A: Ethereum had the highest Positive Score of 0.260000, Bitcoin's highest Positi
 ## Word Clouds
 
 ### Bitcoin Word Cloud
+![btc_wc](btc_wc.png)
 
 ### Ethereum Word Cloud
-
+![eth_wc](eth_wc.png)
 
 ## Named Entity Recognition
 
 ### Bitcoin Visual
+![btc_ent](btc_ent.png)
 
-### Ethereum Visual
+### Ethereum Entities
+![eth_ent](eth_ent.png)
+
