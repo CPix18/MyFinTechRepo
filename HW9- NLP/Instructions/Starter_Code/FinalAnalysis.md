@@ -30,9 +30,10 @@ A: Ethereum had the highest Positive Score of 0.260000, Bitcoin's highest Positi
 ### Produce the n-grams for N = 2
 
 ### Top 10 words for Bitcoin
+![btc_count](btc_count.png)
 
 ### Top 10 words for Ethereum
-
+![eth_count](eth_count.png)
 
 ## Word Clouds
 
