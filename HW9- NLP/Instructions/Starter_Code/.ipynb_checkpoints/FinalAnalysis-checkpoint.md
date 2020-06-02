@@ -45,9 +45,9 @@ A: Ethereum had the highest Positive Score of 0.260000, Bitcoin's highest Positi
 
 ## Named Entity Recognition
 
-### Bitcoin Visual
+### Bitcoin NER
 ![btc_ent](btc_ent.png)
 
-### Ethereum Entities
+### Ethereum NER
 ![eth_ent](eth_ent.png)
 
