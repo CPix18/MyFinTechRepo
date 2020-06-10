@@ -79,6 +79,48 @@ def close(session_attributes, fulfillment_state, message):
 
     return response
 
+def get_investment_recommendation(risk_level):
+    
+    risk_levels = {
+        "none": "100% bonds (AGG), 0% equities (SPY)",
+        "very low": "80% bonds (AGG), 20% equities (SPY)",
+        "low": "60% bonds (AGG), 40% equities (SPY)",
+        "medium": "40% bonds (AGG), 60% equities (SPY)",
+        "high": "20% bonds (AGG), 80% equities (SPY)",
+        "very high": "0% bonds (AGG), 100% equities (SPY)",
+    }
+    
+    return risk_level[risk_level.lower()]
+
+def validate_data(age, amount):
+    """
+    Validates the data provided by the user.
+    """
+
+    # Validate that the user is between 1 and 65 years old
+    if age is not None:
+        age = parse_int(age)
+        if age <= 0 or age > 65:
+            return build_validation_result(
+                False,
+                "age",
+                "You should be between 1 and 65 years old, "
+                "please provide a different age",
+            )
+    
+    # Validate the investment amount, it should be > 0
+    if investmentAmount is not None:
+        investmentAmount = parse_float(
+            investmentAmount
+        )  # Since parameters are strings it's important to cast values
+        if investmentAmount <= 5000:
+            return build_validation_result(
+                False,
+                "investmentAmount",
+                "The investment amount must be greater than 5000, "
+                "please provide a correct investment amount.",
+            )
+    return build_validation_result(True, None, None)
 
 ### Intents Handlers ###
 def recommend_portfolio(intent_request):
@@ -93,13 +135,25 @@ def recommend_portfolio(intent_request):
     source = intent_request["invocationSource"]
 
     if source == "DialogCodeHook":
-        # Perform basic validation on the supplied input slots.
-        # Use the elicitSlot dialog action to re-prompt
-        # for the first violation detected.
+        # This code performs basic validation on the supplied input slots.
+        slots = get_slots(intent_request)
+        
+        # Validates user's input using the validate_data function
+        validation_result = validate_data(age, investment_amount)
 
-        ### YOUR DATA VALIDATION CODE STARTS HERE ###
+        # If the data provided by the user is not valid,
+        # the elicitSlot dialog action is used to re-prompt for the first violation detected.
+        if not validation_result["isValid"]:
+            slots[validation_result["violatedSlot"]] = None  # Cleans invalid slot
 
-        ### YOUR DATA VALIDATION CODE ENDS HERE ###
+        # Returns an elicitSlot dialog to request new data for the invalid slot
+        return elicit_slot(
+            intent_request["sessionAttributes"],
+            intent_request["currentIntent"]["name"],
+            slots,
+            validation_result["violatedSlot"],
+            validation_result["message"],
+        )
 
         # Fetch current session attibutes
         output_session_attributes = intent_request["sessionAttributes"]
@@ -107,10 +161,8 @@ def recommend_portfolio(intent_request):
         return delegate(output_session_attributes, get_slots(intent_request))
 
     # Get the initial investment recommendation
+    initial_recommendation = get_investment_recommendation(risk_level)
 
-    ### YOUR FINAL INVESTMENT RECOMMENDATION CODE STARTS HERE ###
-
-    ### YOUR FINAL INVESTMENT RECOMMENDATION CODE ENDS HERE ###
 
     # Return a message with the initial recommendation based on the risk level.
     return close(
@@ -118,12 +170,9 @@ def recommend_portfolio(intent_request):
         "Fulfilled",
         {
             "contentType": "PlainText",
-            "content": """{} thank you for your information;
-            based on the risk level you defined, my recommendation is to choose an investment portfolio with {}
-            """.format(
-                first_name, initial_recommendation
-            ),
-        },
+            "content": f"""{first_name} thank you for your information;
+            based on the risk level you defined, my recommendation is to choose an investment portfolio with {initial_recommendation}"""
+        }
     )
 
 
