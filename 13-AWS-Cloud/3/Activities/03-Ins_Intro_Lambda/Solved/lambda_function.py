@@ -137,7 +137,7 @@ def convert_usd(intent_request):
     usd_amount = get_slots(intent_request)["usdAmount"]
 
     # Gets the invocation source, for Lex dialogs "DialogCodeHook" is expected.
-    source = intent_request["invocationSource"]  #
+    source = intent_request["invocationSource"] 
 
     if source == "DialogCodeHook":
         # This code performs basic validation on the supplied input slots.
