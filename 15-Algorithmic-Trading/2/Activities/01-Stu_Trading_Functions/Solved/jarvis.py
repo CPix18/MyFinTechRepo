@@ -41,9 +41,9 @@ def update_dashboard():
 def main():
     """Main Event Loop."""
     initialize()
-    fetch_data()
-    generate_signals()
-    execute_backtest()
+    fetch_data(filepath)
+    generate_signals(aapl_df)
+    execute_backtest(signals_df, intitial_capital, share_size)
     execute_trade_strategy()
     evaluate_metrics()
     build_dashboard()

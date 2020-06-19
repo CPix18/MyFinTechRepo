@@ -181,8 +181,8 @@ def main():
     tested_signals_df = execute_backtest(signals_df)
     portfolio_evaluation_df = evaluate_metrics(tested_signals_df)
     dashboard = build_dashboard(tested_signals_df, portfolio_evaluation_df)
-    dashboard.servable()
-    return
+    return dashboard
 
 
-main()
+dashboard = main()
+dashboard.servable()
