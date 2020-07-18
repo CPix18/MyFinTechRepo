@@ -85,7 +85,7 @@ Control + c to exit puppeth
 ./geth --datadir poanode2 --port 30304 --mine --miner.threads 1 --rpc --unlock 6eA91a0133b8B232c59EA2ec1A0401D225eAA0a7 --allow-insecure-unlock --bootnodes enode://b597146c435e9ff736519a7c11b2f8f4f915b112d83fa96cd901fe5edd7a3f1842d7a7bb9c90e4ef9aa65a7dc174017baa85fba4723470fa9f44ee8b8e2b4b1a@127.0.0.1:30303
 
 ![PoANode1Mine](PoANode1Mine.png)
-![PoANode2Mine](PoANode2Mine.png) 
+![PoANode2Mine](PoANoe2Mine.png)
 
 * This step unlocks each node and gives them the ability to mine and connect to the other node
 
