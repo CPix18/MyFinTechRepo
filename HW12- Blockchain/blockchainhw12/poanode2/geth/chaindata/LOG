@@ -1,0 +1,42 @@
+=============== Jul 18, 2020 (CDT) ===============
+14:06:07.154254 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:06:07.180768 db@open opening
+14:06:07.182434 version@stat F·[] S·0B[] Sc·[]
+14:06:07.193020 db@janitor F·2 G·0
+14:06:07.193109 db@open done T·12.26493ms
+14:06:07.194152 db@close closing
+14:06:07.194285 db@close done T·132.77µs
+=============== Jul 18, 2020 (CDT) ===============
+14:17:49.924715 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:17:49.925132 version@stat F·[] S·0B[] Sc·[]
+14:17:49.925177 db@open opening
+14:17:49.925287 journal@recovery F·1
+14:17:49.936191 journal@recovery recovering @1
+14:17:49.946457 memdb@flush created L0@2 N·15 S·1KiB "B\xcfI../\xc9Y,v4":"\xceJ\xde..\x1fUP,v3"
+14:17:49.956175 version@stat F·[1] S·1KiB[1KiB] Sc·[0.25]
+14:17:49.989128 db@janitor F·3 G·0
+14:17:49.989189 db@open done T·63.99154ms
+=============== Jul 18, 2020 (CDT) ===============
+14:21:04.786380 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:21:04.786697 version@stat F·[1] S·1KiB[1KiB] Sc·[0.25]
+14:21:04.786731 db@open opening
+14:21:04.786824 journal@recovery F·1
+14:21:04.795256 journal@recovery recovering @3
+14:21:04.813264 memdb@flush created L0@5 N·2 S·477B "Dat..ion,v17":"cli..F{\xe8,v18"
+14:21:04.822586 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+14:21:04.858738 db@janitor F·4 G·0
+14:21:04.858782 db@open done T·72.034344ms
+14:38:28.087915 db@close closing
+14:38:28.088192 db@close done T·269.5µs
+=============== Jul 18, 2020 (CDT) ===============
+14:52:19.549957 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:52:19.550976 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+14:52:19.551017 db@open opening
+14:52:19.551128 journal@recovery F·1
+14:52:19.561437 journal@recovery recovering @6
+14:52:19.572752 memdb@flush created L0@8 N·11 S·684B "Fas..mit,v30":"r\x00\x00..\xa84Z,v24"
+14:52:19.582541 version@stat F·[3] S·2KiB[2KiB] Sc·[0.75]
+14:52:19.621224 db@janitor F·5 G·0
+14:52:19.621302 db@open done T·70.267914ms
+14:52:51.289370 db@close closing
+14:52:51.289653 db@close done T·281.719µs
