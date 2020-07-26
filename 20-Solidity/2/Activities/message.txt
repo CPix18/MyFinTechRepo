@@ -1,0 +1,39 @@
+pragma solidity ^0.5.0;
+
+contract MessageContract { 
+    
+    string message = "Hi guys!";
+    
+    bool yesno = true;
+    
+    int256 numeric1 = 420;  // Can hold negative numbers, int is a whole number
+    
+    uint256 numeric2 = 10; // Unassigned can not be a negative number
+    
+    address myAccount = 0x739f2bf93D3716eef71FC100563826d7b8F8d56D;  // Does not require quotes
+    
+    
+}
+
+
+// Objects. Object-oriented Programming. Fancy term for classes
+
+// A class describes an object and its features, solidity uses contract for the term class
+
+class AutomatedDoor {
+
+// constructor - ctor 
+public AutomatedDoor(SpeedToClose) { 
+    this.SpeedToClose = SpeedToClose
+}
+
+// Properties
+public float Height { public get; private set; }
+public float Width { public get; private set; }
+private float SpeedToClose { public get; private set; }
+
+// Methods/Functions 
+public void OpensTheDoor(speed) {} // Void doesn't return anything
+public bool CloseTheDoor(speed) {} // Functions and methods mean the same thing, bool returns yes or no 
+
+}

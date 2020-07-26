@@ -1,0 +1,19 @@
+pragma solidity ^0.5.0;
+
+contract JointSavingsAccount { 
+    
+    address payable accountSpouce1 = 0x739f2bf93D3716eef71FC100563826d7b8F8d56D;
+    address payable accountSpouce2 = 0x3a03c422841e56b19aDBF09228729358AD7FBd52;
+    
+    //withdraw
+    function withdraw(uint amount, address payable recipientAddress) public {
+        require (recipientAddress == accountSpouce1 || recipientAddress == accountSpouce2,
+            "Shoo fly don't bother me. You can't do this!"); 
+        recipientAddress.transfer(amount);
+    }
+        
+    //deposit
+    function deposit() public payable {}
+    
+    //fallback function
+    function() external payable {}
