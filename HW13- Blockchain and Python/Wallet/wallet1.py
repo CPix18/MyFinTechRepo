@@ -52,7 +52,6 @@ def getbal(row):
     privKey = row["PrivKey"]
     address = row["Address"]
     coin = row["Coin"]
-    # print(coin, address)
     if coin == 'BTC-test':
         key = wif_to_key(privKey)
         Balance = key.get_balance('btc')
@@ -69,7 +68,8 @@ print(finalDf)
 # Bitcoin transaction
 outputs = []
 for address in addresses:
-    outputs.append((address, 0.0001, "btc"))   
+    outputs.append((address, 0.0001, "btc")) 
+      
 key.send(outputs)
 
 # Ethereum transaction creation
