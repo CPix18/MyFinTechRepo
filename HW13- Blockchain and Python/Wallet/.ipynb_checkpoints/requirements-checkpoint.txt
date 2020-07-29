@@ -1,0 +1,20 @@
+Create Ethereum Environment:
+conda create -n ethereum python=3.7 anaconda
+conda activate ethereum
+pip install web3
+pip install bit
+conda list web3
+conda list bit
+
+Install hd-wallet-derive:
+git clone https://github.com/dan-da/hd-wallet-derive
+cd hd-wallet-derive
+php -r "readfile('https://getcomposer.org/installer');" | php
+php -d pcre.jit=0 composer.phar install
+
+
+Set up simlink for hd-wallet-derive:
+export MSYS=winsymlinks:nativestrict
+cd .. (to folder)
+ln -s hd-wallet-derive/hd-wallet-derive.php derive
+
