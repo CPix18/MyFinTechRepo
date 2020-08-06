@@ -1,12 +1,8 @@
 pragma solidity ^0.5.0;
 // SPDX-License-Identifier: UNLICENSED
 
-import "github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol";
-
 contract AssociateProfitSplitter { 
-    
-    using SafeMath for uint;
-    
+        
     address payable employee_one; 
     address payable employee_two;
     address payable employee_three; 
@@ -24,11 +20,11 @@ contract AssociateProfitSplitter {
     }
 
     function deposit() public payable {
-        uint amount = msg.value.div(3);
+        uint amount = msg.value / 3;
         employee_one.transfer(amount);
         employee_two.transfer(amount);
         employee_three.transfer(amount);
-        uint remainder = msg.value.sub(amount).mul(3);
+        uint remainder = msg.value - amount * 3;
         msg.sender.transfer(remainder);
     }
     

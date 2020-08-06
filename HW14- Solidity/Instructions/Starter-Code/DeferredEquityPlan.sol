@@ -26,6 +26,7 @@ contract DeferredEquityPlan {
         require(distributed_shares < total_shares, "Share have been completely distributed");
         
         unlock_time += 365 days;
+        
         distributed_shares = (now - start_time) / 365 days * annual_employee_distribution;
 
         if (distributed_shares > 1000) {
