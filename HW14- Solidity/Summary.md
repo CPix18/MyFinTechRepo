@@ -22,4 +22,4 @@
 * Distribution of company shares based on incentive plan
 * 1000 shares to go to 4 employees annually, 250 shares each
 
-### Code can be found in .sol files; Instructions/Starter-Code/.sol
+### Code can be found in .sol files
